@@ -1,0 +1,25 @@
+{
+    "name": "acelaya/zf2-testing",
+    "description": "Example ZF2 module to see how unit testing works",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alejandro Celaya",
+            "email": "alejandro@alejandrocelaya.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "zendframework/zendframework": "2.3.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyModule\\": "src/",
+            "MyModuleTest\\": "tests/"
+        },
+        "classmap": ["./Module.php"]
+    }
+}
