@@ -14,12 +14,12 @@ class MyService implements EventManagerAwareInterface
 
     public function foo()
     {
-        $this->getEventManager()->trigger(__FUNCTION__, array('argument' => __FUNCTION__));
+        $this->getEventManager()->trigger(__FUNCTION__, $this, array('argument' => __FUNCTION__));
     }
 
     public function bar()
     {
-        $this->getEventManager()->trigger(__FUNCTION__, array('argument' => __FUNCTION__));
+        $this->getEventManager()->trigger(__FUNCTION__, $this, array('argument' => __FUNCTION__));
     }
 
     /**
