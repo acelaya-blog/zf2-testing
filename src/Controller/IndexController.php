@@ -34,7 +34,7 @@ class IndexController extends AbstractActionController
     {
         $response = new Http\Response();
         $response->setStatusCode(Http\Response::STATUS_CODE_302)
-                 ->getHeaders()->addHeader(new Location('/home'));
+                 ->getHeaders()->addHeaderLine('Location', '/home');
         return $response;
     }
 }
